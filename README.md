@@ -24,7 +24,7 @@ Le 404 CTF est la plus grande compétition de cybersécurité française. Elle e
 
 - 🐈‍⬛ [Algorithmique quantique](AlgorithmiqueQuantique) - *Quantum computing*
 - 🔐 [Cryptanalyse](Cryptanalyse) - *Cryptanalysis*
-- ☎️ Divers - *Miscellaneous*
+- ☎️ [Divers](Divers) - *Miscellaneous*
 - ⚙️ Exploitation de binaires - *Binary exploitation* (Pwn)
 - 🧠 Intelligence artificielle - *Artificial intelligence* (AI)
 - 🔎 Investigation numérique - *Digital forensics*
