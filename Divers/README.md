@@ -7,7 +7,7 @@
 
 ## Challenges
 - 🟦 Bienvenue
-- 🟦 Discord
+- 🟦 [Discord](Discord)
 - 🟦 De la friture sur la ligne
 - 🟩 Coup de circuit [3/3]
 - 🟥 Revers(ibl)e Engineering [0/2]
