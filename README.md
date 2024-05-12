@@ -22,16 +22,16 @@ Le 404 CTF est la plus grande compétition de cybersécurité française. Elle e
 
 ## Catégories
 
-- 🐈‍⬛ Algorithmique quantique
-- 🔐 Cryptanalyse
-- ☎️ Divers
-- ⚙️ Exploitation de binaires
-- 🧠 Intelligence artificielle
-- 🔎 Investigation numérique
-- 🌎 Renseignement en sources ouvertes
-- 🔧 Rétro-Ingénierie
-- 📟 Sécurité materielle
-- ❓ Stéganographie
+- 🐈‍⬛ Algorithmique quantique - *Quantum computing*
+- 🔐 Cryptanalyse - *Cryptanalysis*
+- ☎️ Divers - *Miscellaneous*
+- ⚙️ Exploitation de binaires - *Binary exploitation* (Pwn)
+- 🧠 Intelligence artificielle - *Artificial intelligence* (AI)
+- 🔎 Investigation numérique - *Digital forensics*
+- 🌎 Renseignement en sources ouvertes - *Open source intelligence* (OSINT)
+- 🔧 Rétro-Ingénierie - *Reverse Engineering*
+- 📟 Sécurité materielle - *Hardware*
+- ❓ Stéganographie - *Steganography*
 - 🌐 Web
 
 ## Licence
