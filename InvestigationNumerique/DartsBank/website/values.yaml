@@ -1,0 +1,16 @@
+# https://github.com/bitnami/charts/tree/main/bitnami/nginx
+
+image:
+  registry: registry.hackademint.org
+  repository: 404-ctf-restore/2024/dart-bank
+  tag: latest
+  pullPolicy: Always
+  pullSecrets:
+    - 404ctf-pull-secret
+
+service:
+  type: ClusterIP
+
+ingress:
+  enabled: true
+  hostname: dartsbank.challenges.404ctf.fr
