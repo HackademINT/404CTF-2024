@@ -6,7 +6,7 @@
 </div>
 
 ## Challenges
-- 🟦 Serial killer
+- 🟦 [Serial killer](SerialKiller)
 - 🟩 Le soulevé de GND
 - 🟩 Comment est votre modulation ? [1/2]
 - 🟩 Sea side channel [1/4] - Introduction

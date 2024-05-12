@@ -1,0 +1,3 @@
+[cargo build artifacts]
+generator/target/*
+solver/target/*
