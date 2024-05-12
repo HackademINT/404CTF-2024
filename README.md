@@ -26,7 +26,7 @@ Le 404 CTF est la plus grande compétition de cybersécurité française. Elle e
 - 🔐 [Cryptanalyse](Cryptanalyse) - *Cryptanalysis*
 - ☎️ [Divers](Divers) - *Miscellaneous*
 - ⚙️ [Exploitation de binaires](ExploitationDeBinaires) - *Binary exploitation* (Pwn)
-- 🧠 Intelligence artificielle - *Artificial intelligence* (AI)
+- 🧠 [Intelligence artificielle](IntelligenceArtificielle) - *Artificial intelligence* (AI)
 - 🔎 Investigation numérique - *Digital forensics*
 - 🌎 Renseignement en sources ouvertes - *Open source intelligence* (OSINT)
 - 🔧 Rétro-Ingénierie - *Reverse Engineering*
