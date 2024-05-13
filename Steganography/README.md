@@ -1,7 +1,7 @@
 <div align="center">
-  <h1>Sécurité matérielle - <i>Hardware</i></h1>
+  <h1>Stéganographie - <i>Steganography</i></h1>
   <p>
-    Dans cette catégorie, il vous faudra comprendre le fonctionnement de circuits en tous genres pour en détourner le fonctionnement.
+    La stéganographie est l'art de cacher des messages dans un contenant paraissant innocent.
   </p>
 </div>
 
