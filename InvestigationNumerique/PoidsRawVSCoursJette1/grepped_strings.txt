@@ -1,0 +1,55 @@
+# strings memory.elf | grep anssible
+anssible
+anssibleH9C
+anssibleH9C
+anssible
+anssible
+anssible.ko
+install anssible insmod /usr/lib/modules/5.10.0-cl-1-amd64/kernel/drivers/net/anssible.ko
+anssible 
+MESSAGE=anssible: loading out-of-tree module taints kernel.
+MESSAGE=Inserted module 'anssible'
+anssible.koLmKdJB5uZfjQ
+anssibleH9C
+anssibleH9C
+name=anssible
+anssible
+anssible
+<4>[    2.367508] anssible: loading out-of-tree module taints kernel.
+2024-04-20T12:21:05.836376+02:00 feuille3 kernel: [    2.367508] anssible: loading out-of-tree module taints kernel.
+[    2.367508] anssible: loading out-of-tree module taints kernel.
+anssible
+insmod /usr/lib/modules/5.10.0-cl-1-amd64/kernel/drivers/net/anssible.ko
+2024-04-20T12:21:05.791310+02:00 feuille3 systemd-modules-load[319]: Inserted module 'anssible'
+anssible
+/usr/lib/modules/5.10.0-cl-1-amd64/kernel/drivers/net/anssible.ko
+2024-04-20T12:21:05.836376+02:00 feuille3 kernel: [    2.367508] anssible: loading out-of-tree module taints kernel.
+[Kanssible
+root@feuille3:mgmt:/home/cumulus# sha256 /usr/bin/anssible
+[Cs /usr/bin/anssible
+u /usr/bin/anssible
+m /usr/bin/anssible
+9b0af21a64e2085f800a8d860bf07c09d416fb954c6ee509d6bdd518e7a949ac  /usr/bin/anssible # OOOOOOOOOPS
+cp anssible /usr/bin/anssible
+file /usr/bin/anssible
+cp anssible.ko /usr/lib/modules/5.10.0-cl-1-amd64/kernel/drivers/net/anssible.ko
+modprobe anssible
+sha256 /usr/bin/anssible
+sha256sum /usr/bin/anssible
+/usr/bin/anssible
+2024-04-20T12:18:32.369717+02:00 feuille3 kernel: [  486.111031] anssible: loading out-of-tree module taints kernel.
+Apr 20 12:21:05.668078 feuille3 kernel: anssible: loading out-of-tree module taints kernel.
+Apr 20 12:21:05.680515 feuille3 systemd-modules-load[319]: Inserted module 'anssible'
+anssible
+insmod /usr/lib/modules/5.10.0-cl-1-amd64/kernel/drivers/net/anssible.ko
+anssible
+@feuille3:mgmt:~$ cumulus# 16fb954c6ee509d6bdd518e7a949ac  /usr/bin/anssible
+anssible
+anssible: loading out-of-tree module taints kernel.
+/usr/bin/anssible
+/usr/bin/anssible
+anssibleH9C
+anssibleH9C
+name=anssible
+anssible 
+anssible
