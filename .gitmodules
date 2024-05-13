@@ -1,0 +1,3 @@
+[submodule "RetroEngenierie/Reversible-Engineering"]
+	path = RetroEngenierie/Reversible-Engineering
+	url = git@github.com:hdrien0/Reversible-Engineering.git
