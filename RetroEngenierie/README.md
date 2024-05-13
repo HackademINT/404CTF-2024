@@ -10,9 +10,9 @@
 - 🟩 Intronisation du CHAUSSURE
 - 🟩 Bugdroid Fight [1/2]
 - 🟧 Bugdroid Fight [2/2]
-- 🟧 Revers(ibl)e Engineering [1/2]
+- 🟧 [Revers(ibl)e Engineering [1/2]](https://github.com/hdrien0/Reversible-Engineering)
 - 🟥 Nanocombattants
-- 🟥 Revers(ibl)e Engineering [2/2]
-- 🟥 Poids Raw vs. Cours Jette [2/3]
+- 🟥 [Revers(ibl)e Engineering [2/2]](https://github.com/hdrien0/Reversible-Engineering)
+- 🟥 [Poids Raw vs. Cours Jette [2/3]](PoidsRawVSCoursJette2)
 - 🟪 Le Tableau Noir
 - 🟪 L'entrée du Dojo
