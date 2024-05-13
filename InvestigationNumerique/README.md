@@ -8,7 +8,7 @@
 ## Challenges
 - 🟦 Le tir aux logs
 - 🟦 Un boulevard pour pointer
-- 🟩 Coup de circuit [1/3]
+- 🟩 [Coup de circuit [1/3]](CoupDeCircuit)
 - 🟧 [Darts Bank](DartsBank)
 - 🟧 Vaut mieux sécuriser que guérir
 - 🟥 De bons croissants au beurre

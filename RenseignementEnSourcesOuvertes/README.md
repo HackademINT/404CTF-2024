@@ -8,7 +8,7 @@
 ## Challenges
 - 🟦 Légende
 - 🟩 Not on my watch
-- 🟩 Coup de circuit [2/3]
+- 🟩 [Coup de circuit [2/3]](../InvestigationNumerique/CoupDeCircuit)
 - 🟧 That Escalated Quickly
 - 🟧 Secret Training [2/2]
 - 🟥 Secret Training [1/2]

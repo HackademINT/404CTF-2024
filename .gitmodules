@@ -1,3 +1,6 @@
 [submodule "RetroEngenierie/Reversible-Engineering"]
 	path = RetroEngenierie/Reversible-Engineering
 	url = git@github.com:hdrien0/Reversible-Engineering.git
+[submodule "InvestigationNumerique/CoupDeCircuit/C2/BatteC2"]
+	path = InvestigationNumerique/CoupDeCircuit/C2/BatteC2
+	url = https://github.com/BribriTireuse/BatteC2

@@ -9,5 +9,5 @@
 - 🟦 Bienvenue
 - 🟦 [Discord](Discord)
 - 🟦 De la friture sur la ligne
-- 🟩 Coup de circuit [3/3]
+- 🟩 [Coup de circuit [3/3]](../InvestigationNumerique/CoupDeCircuit)
 - 🟥 Revers(ibl)e Engineering [0/2]
