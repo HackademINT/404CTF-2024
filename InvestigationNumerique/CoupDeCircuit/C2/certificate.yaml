@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: coup-de-circtui-panel
+spec:
+  secretName: coup-de-circuit-panel-cert
+  issuerRef:
+    name: letsencrypt-prod-acme-http
+  commonName: takemeouttotheballgame.space
+  dnsNames:
+  - panel-5d4213f3bf078fb1656a3db8348282f482601690.takemeouttotheballgame.space
+  - takemeouttotheballgame.space

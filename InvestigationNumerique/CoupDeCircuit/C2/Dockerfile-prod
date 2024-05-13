@@ -1,0 +1,15 @@
+FROM python:3.12-alpine3.19
+
+COPY ./BatteC2/ /app
+COPY mojo.odt /app/static/227eb601e5bf8ea0c5da13a26be3eba2e5fea2cd7d75dcd2951cf615dd790da5/
+COPY Secret-Mojo.pdf /app/static/227eb601e5bf8ea0c5da13a26be3eba2e5fea2cd7d75dcd2951cf615dd790da5/
+WORKDIR /app
+
+RUN pip install -r requirements.txt && \
+    pip install gunicorn
+
+USER 65534:65534
+EXPOSE 5000
+
+ENTRYPOINT ["gunicorn", "app:app"]
+CMD ["-w", "4", "--threads", "4", "-b", "0.0.0.0:5000"]

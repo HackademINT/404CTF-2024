@@ -8,9 +8,9 @@
 ## Challenges
 - 🟦 Le tir aux logs
 - 🟦 Un boulevard pour pointer
-- 🟩 Coup de circuit [1/3]
+- 🟩 [Coup de circuit [1/3]](CoupDeCircuit)
 - 🟧 [Darts Bank](DartsBank)
 - 🟧 Vaut mieux sécuriser que guérir
 - 🟥 De bons croissants au beurre
-- 🟥 Poids Raw vs. Cours Jette [1/3]
+- 🟥 [Poids Raw vs. Cours Jette [1/3]](PoidsRawVSCoursJette1)
 - 🟪 Poids Raw vs. Cours Jette [3/3]

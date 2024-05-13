@@ -1,0 +1,12 @@
+[submodule "RetroEngenierie/Reversible-Engineering"]
+	path = RetroEngenierie/Reversible-Engineering
+	url = git@github.com:hdrien0/Reversible-Engineering.git
+[submodule "InvestigationNumerique/CoupDeCircuit/C2/BatteC2"]
+	path = InvestigationNumerique/CoupDeCircuit/C2/BatteC2
+	url = https://github.com/BribriTireuse/BatteC2
+[submodule "ExploitationDeBinaires/challenges-404CTF"]
+	path = ExploitationDeBinaires/challenges-404CTF
+	url = git@github.com:narcisseuuh/challenges-404CTF.git
+[submodule "RetroEngenierie/challenges-404CTF"]
+	path = RetroEngenierie/challenges-404CTF
+	url = git@github.com:narcisseuuh/challenges-404CTF.git
