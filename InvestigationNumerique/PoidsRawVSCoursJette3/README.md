@@ -101,3 +101,26 @@ Si la récupération de la pcap vous intéresse, vous pouvez toujours regarder [
 Il est évidemment à modifier, car il traitait les paquets au moment de la réception. 
 
 Les deux méthodes permettent de trouver un fichier 7z qui contient le flag.
+
+# Ressources utiles pour comprendre ce qu'est un rootkit
+
+Les bases et un peu d'histoire, toujours un bon point de départ.
+
+[Wikipedia](https://en.wikipedia.org/wiki/Rootkit)
+
+Comprendre ce qu'est un module kernel, pas forcémént malveillant.
+
+[Linux Device Drivers, Third Edition](https://lwn.net/Kernel/LDD3/)
+
+Blog qui explique la base pour faire un module malveillant.
+
+[(nearly) Complete Linux Loadable Kernel Modules](https://web.archive.org/web/20140701183221/https://www.thc.org/papers/LKM_HACKING.html)
+
+Un des rootkit les plus connus, qui a inspiré celui présenté (celui de ce challenge aussi).
+
+[Diamorphine](https://github.com/m0nad/Diamorphine)
+
+Pour aller plus loin, blog qui montre des idées de fonctionnalités en plus.
+
+[Blog chouette](https://xcellerator.github.io/posts/linux_rootkits_01/)
+
