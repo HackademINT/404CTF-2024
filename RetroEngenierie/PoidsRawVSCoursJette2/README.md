@@ -37,7 +37,7 @@ De la ligne 69 à la ligne 105, on retrouve la définition de la plupart des fon
 
 ### Un rootkit
 
-*A la ligne 93*, le main, on rentre dans la logique du binaire avec des trucs un peux spéicaux, des appels aux fonctions `getpid` et `kill`. La raison de l'apparition de cette logique est inscrit dans le code du rootkit. Et oui ! Voilà l'une des subtilités très importantes du challenge, la présence d'un rootkit chargé basé sur [Diamorphine](https://github.com/m0nad/Diamorphine)qui a de nombreuses fonctionnalités basé autour de hooks d'appels systèmes :
+*A la ligne 93*, le main, on rentre dans la logique du binaire avec des trucs un peux spéicaux, des appels aux fonctions `getpid` et `kill`. La raison de l'apparition de cette logique est inscrit dans le code du rootkit. Et oui ! Voilà l'une des subtilités très importantes du challenge, la présence d'un rootkit chargé basé sur [Diamorphine](https://github.com/m0nad/Diamorphine) qui a de nombreuses fonctionnalités basé autour de hooks d'appels systèmes :
 - Le hook de `kill` permet de manipuler :
 	- L'envois du **signal 31** permettant désormais de **cacher un processus** en cachant son dossier nommé par son PID dans /proc, le rendant ainsi indetectable aux yeux de ps.
 	- L'envois du **signal 63** permettant désormais d'**initialiser le RC4** pour une partie qui va prendre de l'importance plus tard
@@ -79,5 +79,5 @@ ligne 236 :mprotect((void*)(brutus-2240), 0x1000, PROT_READ | PROT_WRITE | PROT_
 Lorsqu'on fait nos appels à tcc, ce dernier va alouer de l'espace sur la heap pour faire son affaire. Comme il fait de la compilation, il va en faire en sorte que l'espace alloué soit éxecutable ! On va effectivement notre fonction assemblée dans cet epsace après ses bêtises. 
 Plus tard dans le binaire, si on cherche à allouer d'autres trucs, on va planter les trois-quarts du temps, et notamment même si on cherche à faire un getchar(). C'est dû au fait que lors que TCC fait son affaire, il prends un gros chunk, mais genre vraiment un gros chunk et du coup dès qu'on va chercher à allouer d'autres trucs, il va prendre une zone adjacente qui tombe dans la zone de 0x1000 octets qu'il ne peut pas rendre écrivable (eh ouai W^X), donc du coup j'ai été oboligé de mprotect ça comme un gros sac en partant du principe que l'offset entre la fonction brutus et lde début de la zon est toujours le même.
 
-![alt text](image.png)
-![alt text](image-1.png)
+![](image.png)
+![](image-1.png)
