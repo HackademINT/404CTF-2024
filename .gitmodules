@@ -10,3 +10,9 @@
 [submodule "RetroEngenierie/challenges-404CTF"]
 	path = RetroEngenierie/challenges-404CTF
 	url = git@github.com:narcisseuuh/challenges-404CTF.git
+[submodule "InvestigationNumerique/DeBonCroissantsAuBeurre/backdoor/pam"]
+	path = InvestigationNumerique/DeBonCroissantsAuBeurre/backdoor/pam
+	url = https://gitlab.archlinux.org/archlinux/packaging/packages/pam
+[submodule "InvestigationNumerique/DeBonCroissantsAuBeurre/backdoor/linux-pam"]
+	path = InvestigationNumerique/DeBonCroissantsAuBeurre/backdoor/linux-pam
+	url = https://github.com/linux-pam/linux-pam/

