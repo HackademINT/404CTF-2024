@@ -1,6 +1,6 @@
 # Darts Bank
 
-Difficulté moyenne - 200 points
+Difficulté moyenne - 200 points - 244 validations
 
 - Analyse de capture réseau
 - Deobfuscation et reverse de scripts PowerShell
