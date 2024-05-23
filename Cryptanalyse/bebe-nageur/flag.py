@@ -1,0 +1,1 @@
+FLAG="404CTF{Th3_r3vEnGE_1S_c0minG_S0oN_4nD_w1Ll_b3_TErRiBl3_!}"

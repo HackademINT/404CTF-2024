@@ -1,0 +1,1 @@
+FLAG = b'404CTF{l4_bRAss3_3t_lE_P@p1lL0n_!!!!!!!}'

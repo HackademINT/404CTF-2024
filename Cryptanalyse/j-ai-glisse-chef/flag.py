@@ -1,0 +1,1 @@
+FLAG = "404CTF{m0R3_ROuNd5_d0es_NoT_me4n_MoR3_53cURiTy}"
