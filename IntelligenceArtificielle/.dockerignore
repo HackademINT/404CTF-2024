@@ -1,0 +1,10 @@
+.venv/
+solutions/
+models/
+weights/
+data/
+
+environment.yml
+.gitlab-ci.yml
+.gitignore
+README.md
