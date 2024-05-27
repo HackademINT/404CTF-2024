@@ -117,6 +117,7 @@ conda install jupyter pandas matplotlib
 ```shell
 pacman -S tensorflow 
 ```
+> [!NOTE]
 > Il faudra alors demander à l'environnement virtuel de tout prendre en compte : `python -m venv --system-site-packages .venv`.
 
 ## Installation de la partie challenges sur autre chose que Linux
