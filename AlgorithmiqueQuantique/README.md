@@ -83,7 +83,8 @@ python -m api.main
 ```
 
 ## Installation de la partie challenges sur Linux
-***&rarr; Attention, il faut récupérer la version 2.15 de tensorflow.***
+> [!WARNING]
+> ***&rarr;Il faut récupérer la version 2.15 de tensorflow.***
 
 ### Avec un environnement virtuel python
 ```shell
@@ -119,7 +120,8 @@ pacman -S tensorflow
 > Il faudra alors demander à l'environnement virtuel de tout prendre en compte : `python -m venv --system-site-packages .venv`.
 
 ## Installation de la partie challenges sur autre chose que Linux
-Bonne chance :)
+> [!TIP]
+> Bonne chance :)
 
 ## Challenges sur Colab
 Il est possible de faire tous les challenges sur Google Colab pour ne pas avoir à utiliser votre ordinateur. Pensez juste à ajouter le module `fl` comportant toutes les fonctions utilitaires dans votre session. 
