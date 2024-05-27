@@ -1,9 +1,6 @@
 <div align="center">
   <h1>Algorithmique quantique - <i>Quantum computing</i></h1>
-  <p>
-
-
-Ce repository contient toutes les ressources nécessaires pour faire les challenges en local ainsi que les solutions. 
+</div>
 
 ## Challenges
 - 🟦 Des trains superposés
@@ -66,6 +63,4 @@ docker run -p 8000:8000 perceval
 - Solving the Network Shortest Path Problem on a Quantum Annealer : https://ieeexplore.ieee.org/document/9186612
 - Entanglement in Graph States and its Applications : https://arxiv.org/abs/quant-ph/0602096
 - Quantum Algorithms for Lattice Problems : https://eprint.iacr.org/2024/555
-  </p>
-</div>
 
