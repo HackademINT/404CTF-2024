@@ -8,11 +8,8 @@
       Artificial intelligence is all the rage! But do you really know how to use it? These challenges require you to use artificial intelligence techniques, and even know how to attack them! I plan to add more resources and refine my WU over the coming weeks. Don't hesitate to contact me on discord if you'd like more information. Sckathach#9336 on the 404 CTF's official discord.
     </i>
   </p>
-  <p>
-
-
-Ce répertoire contient tous les fichiers pour jouer aux challenges d'intelligence artificielle du 404 CTF, ainsi que les 
-solutions et l'implémentation du serveur de vérification. 
+  
+</div>
 
 ## Challenges
 - 🟦 Du poison [1/2]
@@ -126,5 +123,5 @@ Bonne chance :)
 
 ## Challenges sur Colab
 Il est possible de faire tous les challenges sur Google Colab pour ne pas avoir à utiliser votre ordinateur. Pensez juste à ajouter le module `fl` comportant toutes les fonctions utilitaires dans votre session. 
-  </p>
-</div>
+
+
