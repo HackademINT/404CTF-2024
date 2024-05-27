@@ -1,66 +1,130 @@
 <div align="center">
-  <h1>Algorithmique quantique - <i>Quantum computing</i></h1>
+  <h1>Intelligence Artificielle - <i>Artificial Intelligence</i></h1>
+  <p>
+    L'intelligence artificielle est à la mode ! Mais savez vous vraiment vous en servir ? Ces challenges nécessitent d'utiliser des techniques d'intelligence artifielle, voir même de savoir les attaquer ! Je compte rajouter des ressources et peaufiner mes WU dans les prochaines semaines. N'hésitez pas à me contacter sur discord si vous souhaitez plus d'informations. - Sckathach#9336 sur le discord du 404 CTF. 
+  </p>
+  <p>
+    <i>
+      Artificial intelligence is all the rage! But do you really know how to use it? These challenges require you to use artificial intelligence techniques, and even know how to attack them! I plan to add more resources and refine my WU over the coming weeks. Don't hesitate to contact me on discord if you'd like more information. Sckathach#9336 on the 404 CTF's official discord.
+    </i>
+  </p>
+  
 </div>
 
 ## Challenges
-- 🟦 Des trains superposés
-- 🟩 De l'écoute, pas très discrète
-- 🟧 De la multiplicité des problèmes
-- 🟥 De l'inversion
+- 🟦 Du poison [1/2]
+- 🟩 Du poison [2/2]
+- 🟧 Des portes dérobées
+- 🟧 Du poison [3/2]
 
-## Installation challenges
-Avec un environnement virtuel Python : 
+## Structure du répertoire
+### Partie joueur 
+``` 
+├── challenges                      -> tous les challenges sont sous la forme de Jupyter Notebook :)
+│   ├── chall_1.ipynb
+│   ├── chall_2.ipynb
+│   ├── chall_3.ipynb
+│   └── chall_4.ipynb
+├── data/                           -> contient les exemples pour le challenge 4
+├── environment.yml
+├── fl
+│   ├── aggregators.py              -> mise en commun des modèles des différents clients, une simple moyenne ici
+│   ├── federated_learning.py       -> exemple d'apprentissage fédéré pour pouvoir esssayer en local
+│   ├── __init__.py
+│   ├── model.py                    -> définition du modèle utilisé 
+│   ├── preprocessing.py            -> traitement en amont des données pour qu'elles soient utilisable
+│   ├── types.py
+│   └── utils.py                    -> quelques fonctions utilitaires, par exemple pour afficher une image MNIST
+├── models/
+├── README.md
+├── requirements.txt
+└── weights
+    └── base_fl.weights.h5          -> poids de base du modèle commun         
+```
+
+### Partie serveur 
+```
+├── api
+│   ├── challenges.py
+│   ├── challenges_weights/
+│   ├── config.toml
+│   ├── federated_learning.py       -> aprentissage fédéré côté serveurs avec les poids des autres clients déjà 
+                                            calculés pour réduire le temps de calcul et surtout pour rendre le processus
+                                            déterministe par rapport aux poids du joueur
+│   ├── force_data/
+│   ├── __init__.py
+│   ├── main.py                     -> point d'entrée de l'API
+│   └── utils.py
+├── fl/
+├── solutions
+│   ├── adv.py                      
+│   ├── adv_utils.py
+│   ├── challenge_1_solution.ipynb
+│   ├── challenge_2_solution.ipynb
+│   ├── challenge_3_solution.ipynb
+│   ├── challenge_4_solution.ipynb
+│   ├── __init__.py
+├── Dockerfile
+└── weights
+    └── base_fl.weights.h5
+```
+
+## Utilisation du serveur pour les tests 
+La partie serveur est disponible dans `api/`. Pour l'utiliser, vous pouvez utiliser [Docker](https://www.docker.com/) 
+avec : 
 ```shell
-python -m venv .venv 
+docker build -t challenges-ia . 
+docker run -p 8000:8000 challenges-ia
+```
+
+Il est aussi possible d'utiliser directement l'API avec Python : 
+```shell
+python -m api.main
+```
+
+## Installation de la partie challenges sur Linux
+> [!WARNING]
+> ***&rarr;Il faut récupérer la version 2.15 de tensorflow.***
+
+### Avec un environnement virtuel python
+```shell
+python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements
 ```
+Sinon, pensez à installer Tensorflow correctement : https://www.tensorflow.org/install/pip
 
-Si les requirements ne passent pas, il suffit de Perceval, Qiskit (pour les visualisations de la sphère de Bloch), et 
-Numpy Matplotlib : 
-```shell 
-pip install perceval-quandela qiskit numpy matplotlib
-```
-
-## Installation API pour vérifier les challenges 
-J'ai utilisé FastAPI pour vérifier les challenges côté serveur. Vous pouvez tout reproduire en local, tout le code est 
-disponible dans le module `api/`. Pour cela, vous aurez besoin de : 
+Pour utiliser une autre version de Python, il est possible d'appeler la commande différemment :  
 ```shell
-pip install toml fastapi uvicorn
+python3.11 -m venv .venv
 ```
+Je vous conseille d'utiliser Python 3.11, tous les challenges devraient fonctionner dessus. 
 
-Il vous suffira ensuite d'[installer Docker sur votre système](https://docs.docker.com/get-docker/) puis de construire 
-et lancer l'API : 
+## Installation de la partie challenges avec Conda
 ```shell
-# À la racine du dossier 
-docker build -t perceval . 
-docker run -p 8000:8000 perceval 
+conda create -n flow python=3.11
+conda activate flow 
+conda install -c conda-forge tensorflow=2.15
+conda install jupyter pandas matplotlib
 ```
 
-## Ressources supplémentaires
-- Il est recommandé de faire le tour de présentation de Perceval :
-  https://perceval.quandela.net/docs/notebooks/Tutorial.html
+## Installation de la partie challenges sur Archlinux 
+- Tutoriel incroyable pour installer les *drivers* Nvidia : https://github.com/korvahannu/arch-nvidia-drivers-installation-guide/blob/main/README.md
 
-- Il sera peut-être utile de jeter un coup d'œil à la documentation de Perceval : https://perceval.quandela.net/docs/
-  ou directement au code : https://github.com/Quandela/Perceval, la documentation est jeune et pas encore complète.
+- Pour que la configuration reste au redémarrage : `sudo nvidia-persistenced --user nvidia-persistenced --persistence-mode`
 
-- Un forum Perceval est disponible ici : https://perceval.quandela.net/forum/
+- Il est possible (et je recommande si vous utilisez les modules dans plein de projets différents), d'installer les paquets de manière globale, par exemple :
+```shell
+pacman -S tensorflow 
+```
+> [!NOTE]
+> Il faudra alors demander à l'environnement virtuel de tout prendre en compte : `python -m venv --system-site-packages .venv`.
 
-- Excellentes vidéos d'IBM : https://learning.quantum.ibm.com/. Le framework utilisé est celui de qiskit, mais la
-  théorie est la même.
+## Installation de la partie challenges sur autre chose que Linux
+> [!TIP]
+> Bonne chance :)
 
-- Pour ceux qui préfèrent les livres : [Quantum computation and quantum information](https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE#overview)
-  de Michael Nielsen et Isaac Chuang. Il est disponible à la bibliothèque nationale de France François Mitterrand.
+## Challenges sur Colab
+Il est possible de faire tous les challenges sur Google Colab pour ne pas avoir à utiliser votre ordinateur. Pensez juste à ajouter le module `fl` comportant toutes les fonctions utilitaires dans votre session. 
 
-## Papiers intéressants
-- Multi-partite quantum cryptographic protocols with noisy GHZ states : https://arxiv.org/abs/quant-ph/0404133
-- Analysis of Various Attacks over BB84 Quantum Key Distribution Protocol :
-  https://www.ijcaonline.org/volume20/number8/pxc3873313.pdf
-- Simple Proof of Security of the BB84 Quantum Key Distribution Protocol :
-  https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.85.441
-
-## L'année prochaine (*shht...*)
-- Solving the Network Shortest Path Problem on a Quantum Annealer : https://ieeexplore.ieee.org/document/9186612
-- Entanglement in Graph States and its Applications : https://arxiv.org/abs/quant-ph/0602096
-- Quantum Algorithms for Lattice Problems : https://eprint.iacr.org/2024/555
 
