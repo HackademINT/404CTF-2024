@@ -73,11 +73,11 @@ Pour la fin du binaire, l'analyse va surtout être importante dans le challenge 
 
 # Bonus
 
-Petit bizarrerie sur laquelle je suis tombé en faisant joujou avec nos bêtises. On à fait le tour de tout le binaire, quasiment, mais il manque une ligne petite ligne a priori insignifiante mais qui est le résultat d'un arrachage de cheveux rigolo.
-ligne 236 :mprotect((void*)(brutus-2240), 0x1000, PROT_READ | PROT_WRITE | PROT_EXEC);
+Petit bizarrerie sur laquelle je suis tombé en faisant joujou avec nos bêtises. On à fait le tour de tout le binaire, quasiment, mais il manque une petite ligne a priori insignifiante mais qui est le résultat d'un arrachage de cheveux rigolo.
+*Ligne 236* : `mprotect((void*)(brutus-2240), 0x1000, PROT_READ | PROT_WRITE | PROT_EXEC);`
 
-Lorsqu'on fait nos appels à tcc, ce dernier va alouer de l'espace sur la heap pour faire son affaire. Comme il fait de la compilation, il va en faire en sorte que l'espace alloué soit éxecutable ! On va effectivement notre fonction assemblée dans cet epsace après ses bêtises. 
-Plus tard dans le binaire, si on cherche à allouer d'autres trucs, on va planter les trois-quarts du temps, et notamment même si on cherche à faire un getchar(). C'est dû au fait que lors que TCC fait son affaire, il prends un gros chunk, mais genre vraiment un gros chunk et du coup dès qu'on va chercher à allouer d'autres trucs, il va prendre une zone adjacente qui tombe dans la zone de 0x1000 octets qu'il ne peut pas rendre écrivable (eh ouai W^X), donc du coup j'ai été oboligé de mprotect ça comme un gros sac en partant du principe que l'offset entre la fonction brutus et lde début de la zon est toujours le même.
+Lorsqu'on fait nos appels à **TCC**, ce dernier va allouer de l'espace sur la heap pour faire son affaire. Comme il fait de la compilation, il va faire en sorte que l'espace alloué soit éxecutable ! On va effectivement retrouver notre fonction assemblée dans cet epsace après éxecution de ses fonctions. 
+Plus tard dans le binaire, si on cherche à allouer d'autres trucs, on va planter les trois-quarts du temps, et notamment même si on cherche à faire un `getchar()`. C'est dû au fait que lorsque **TCC** fait son affaire, il prends un gros chunk, mais genre vraiment un gros chunk. Du coup, dès qu'on va chercher à allouer d'autres trucs, il va prendre une zone adjacente qui tombe dans la zone de `0x1000` octets créé par **TCC**, qu'il ne peut pas rendre écrivable (eh ouai, `W^X`), donc du coup, j'ai été obligé de `mprotect` ça comme un gros sac en partant du principe que l'offset entre la fonction `brutus` et le début de la zone est toujours le même.
 
 ![](image.png)
 ![](image-1.png)
